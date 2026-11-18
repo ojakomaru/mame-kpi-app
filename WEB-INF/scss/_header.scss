@@ -1,0 +1,40 @@
+@use "config" as *;
+/* コンテンツヘッダー */
+section.kpiContents .contentsHeader {
+  grid-area: kpiContents;
+  display: grid;
+  grid-template-areas: "topbarDataSelector topbarSearch";
+  padding: 0 10px 0 15px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba($sub_color, 0.1);
+  height: 50px;
+  border-bottom: 1px solid $accent_color;
+
+  #nowDateTime {
+    padding-left: 20px;
+    color: $text_color;
+  }
+}
+ul.topbarSearch {
+  grid-area: topbarSearch;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 10px;
+
+  li {
+    padding: 5px 10px;
+    border: 1px solid $accent_color;
+    border-radius: 12px;
+    position: relative;
+    transition: all .2s;
+    cursor: pointer;
+    background-color: $main_color;
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      color: $main_color;
+    }
+  }
+}

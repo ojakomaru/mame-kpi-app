@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable="true">
+<Resource
+  name="jdbc/habit"
+  auth="Container"
+  type="javax.sql.DataSource"
+  driverClassName="com.mysql.cj.jdbc.Driver"
+  url="jdbc:mysql://localhost/habit"
+  username="YOUR_DB_USER" password="YOUR_DB_PASSWORD"
+  maxTotal="4"
+  maxWaitMillis="5000"
+  maxIdle="2"
+  validationQuery="SELECT count(*) FROM habit">
+</Resource>
+</Context>
